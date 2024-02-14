@@ -2245,6 +2245,9 @@ if (window["$sf"]) {
 
 		function make_iframe(attrs, cssText, cb, xmsgCB)
 		{
+			//allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                        attrs["sandbox"] = "allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation";
+                        attrs["allow"] = "attribution-reporting";
 			return _clone_iframe(make_element(IFRAME), attrs, cssText, cb, xmsgCB, TRUE);
 		}
 
